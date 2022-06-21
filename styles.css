@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  background: black;
+}
+/* .wrapper{
+  border:1px solid yellow;
+} */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  margin: 0.5em;
+}
+.card:nth-child(1) {
+  margin-left: 2em;
+}
+.card:nth-child(3) {
+  margin-right: 2em;
+}
+.card > img {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: relative;
+  top: -100.5%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #008cba;
+}
+@media only screen and (max-width: 600px) {
+ .overlay{
+   position:relative;
+   top: -104.0%;
+   bottom: 0;
+   left: 0;
+   right: 0;
+ }
+}
+@media only screen and (max-width: 900px) {
+  .overlay{
+    position:relative;
+    top: -102.0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+ }
+ @media only screen and (max-width: 2000px) {
+  .overlay{
+    position:relative;
+    top: -101%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+ }
+.card {
+  width: 50%;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 4vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
